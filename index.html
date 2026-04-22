@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
@@ -18,466 +19,468 @@
     --text:   #1a2035;
   }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+- { margin: 0; padding: 0; box-sizing: border-box; }
 
-  html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; }
 
-  body {
-    font-family: 'Barlow', sans-serif;
-    color: var(--text);
-    background: var(--white);
-    overflow-x: hidden;
-  }
+body {
+font-family: ‘Barlow’, sans-serif;
+color: var(–text);
+background: var(–white);
+overflow-x: hidden;
+}
 
-  /* ── NAV ───────────────────────────────────────────────── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(27,42,74,0.97);
-    backdrop-filter: blur(10px);
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 0 5%;
-    height: 68px;
-    border-bottom: 2px solid var(--gold);
-  }
-  .nav-logo {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 800; font-size: 1.5rem;
-    color: var(--white); letter-spacing: 1px;
-  }
-  .nav-logo span { color: var(--gold); }
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nav-links a {
-    color: rgba(255,255,255,0.8); text-decoration: none;
-    font-size: 0.9rem; font-weight: 500; letter-spacing: 0.5px;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--gold); }
-  .nav-cta {
-    background: var(--gold); color: var(--navy);
-    padding: 0.5rem 1.4rem; border-radius: 4px;
-    font-weight: 700; font-size: 0.85rem; text-decoration: none;
-    letter-spacing: 0.5px; transition: background 0.2s;
-  }
-  .nav-cta:hover { background: var(--gold2); }
+/* ── NAV ───────────────────────────────────────────────── */
+nav {
+position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+background: rgba(27,42,74,0.97);
+backdrop-filter: blur(10px);
+display: flex; align-items: center; justify-content: space-between;
+padding: 0 5%;
+height: 68px;
+border-bottom: 2px solid var(–gold);
+}
+.nav-logo {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 800; font-size: 1.5rem;
+color: var(–white); letter-spacing: 1px;
+}
+.nav-logo span { color: var(–gold); }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a {
+color: rgba(255,255,255,0.8); text-decoration: none;
+font-size: 0.9rem; font-weight: 500; letter-spacing: 0.5px;
+transition: color 0.2s;
+}
+.nav-links a:hover { color: var(–gold); }
+.nav-cta {
+background: var(–gold); color: var(–navy);
+padding: 0.5rem 1.4rem; border-radius: 4px;
+font-weight: 700; font-size: 0.85rem; text-decoration: none;
+letter-spacing: 0.5px; transition: background 0.2s;
+}
+.nav-cta:hover { background: var(–gold2); }
 
-  /* ── HERO ──────────────────────────────────────────────── */
-  #hero {
-    min-height: 100vh;
-    background: var(--navy);
-    display: flex; align-items: center;
-    position: relative; overflow: hidden;
-    padding-top: 68px;
-  }
+/* ── HERO ──────────────────────────────────────────────── */
+#hero {
+min-height: 100vh;
+background: var(–navy);
+display: flex; align-items: center;
+position: relative; overflow: hidden;
+padding-top: 68px;
+}
 
-  .hero-bg {
-    position: absolute; inset: 0;
-    background: 
-      radial-gradient(ellipse 80% 60% at 70% 50%, rgba(245,166,35,0.07) 0%, transparent 70%),
-      radial-gradient(ellipse 50% 80% at 20% 80%, rgba(245,166,35,0.04) 0%, transparent 60%);
-  }
+.hero-bg {
+position: absolute; inset: 0;
+background:
+radial-gradient(ellipse 80% 60% at 70% 50%, rgba(245,166,35,0.07) 0%, transparent 70%),
+radial-gradient(ellipse 50% 80% at 20% 80%, rgba(245,166,35,0.04) 0%, transparent 60%);
+}
 
-  /* Diagonal stripe accent */
-  .hero-stripe {
-    position: absolute; right: -5%; top: 0; bottom: 0;
-    width: 45%;
-    background: rgba(255,255,255,0.025);
-    transform: skewX(-8deg);
-    transform-origin: top right;
-  }
+/* Diagonal stripe accent */
+.hero-stripe {
+position: absolute; right: -5%; top: 0; bottom: 0;
+width: 45%;
+background: rgba(255,255,255,0.025);
+transform: skewX(-8deg);
+transform-origin: top right;
+}
 
-  .hero-content {
-    position: relative; z-index: 2;
-    max-width: 1200px; margin: 0 auto;
-    padding: 0 5%;
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 4rem; align-items: center;
-  }
+.hero-content {
+position: relative; z-index: 2;
+max-width: 1200px; margin: 0 auto;
+padding: 0 5%;
+display: grid; grid-template-columns: 1fr 1fr;
+gap: 4rem; align-items: center;
+}
 
-  .hero-tag {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    background: rgba(245,166,35,0.15);
-    border: 1px solid rgba(245,166,35,0.3);
-    color: var(--gold); padding: 0.4rem 1rem;
-    border-radius: 100px; font-size: 0.8rem;
-    font-weight: 600; letter-spacing: 1.5px;
-    text-transform: uppercase; margin-bottom: 1.5rem;
-    animation: fadeUp 0.6s ease both;
-  }
+.hero-tag {
+display: inline-flex; align-items: center; gap: 0.5rem;
+background: rgba(245,166,35,0.15);
+border: 1px solid rgba(245,166,35,0.3);
+color: var(–gold); padding: 0.4rem 1rem;
+border-radius: 100px; font-size: 0.8rem;
+font-weight: 600; letter-spacing: 1.5px;
+text-transform: uppercase; margin-bottom: 1.5rem;
+animation: fadeUp 0.6s ease both;
+}
 
-  .hero-title {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 800; font-size: clamp(3rem, 5vw, 4.5rem);
-    color: var(--white); line-height: 1.0;
-    letter-spacing: 0.5px; margin-bottom: 1.2rem;
-    animation: fadeUp 0.6s 0.1s ease both;
-  }
-  .hero-title span { color: var(--gold); }
+.hero-title {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 800; font-size: clamp(3rem, 5vw, 4.5rem);
+color: var(–white); line-height: 1.0;
+letter-spacing: 0.5px; margin-bottom: 1.2rem;
+animation: fadeUp 0.6s 0.1s ease both;
+}
+.hero-title span { color: var(–gold); }
 
-  .hero-sub {
-    color: rgba(255,255,255,0.7); font-size: 1.1rem;
-    font-weight: 400; line-height: 1.7; margin-bottom: 2rem;
-    animation: fadeUp 0.6s 0.2s ease both;
-  }
+.hero-sub {
+color: rgba(255,255,255,0.7); font-size: 1.1rem;
+font-weight: 400; line-height: 1.7; margin-bottom: 2rem;
+animation: fadeUp 0.6s 0.2s ease both;
+}
 
-  .hero-btns {
-    display: flex; gap: 1rem; flex-wrap: wrap;
-    animation: fadeUp 0.6s 0.3s ease both;
-  }
-  .btn-primary {
-    background: var(--gold); color: var(--navy);
-    padding: 0.9rem 2rem; border-radius: 4px;
-    font-weight: 700; font-size: 0.95rem;
-    text-decoration: none; letter-spacing: 0.5px;
-    transition: all 0.2s; border: none; cursor: pointer;
-  }
-  .btn-primary:hover { background: var(--gold2); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(245,166,35,0.3); }
-  .btn-outline {
-    background: transparent; color: var(--white);
-    padding: 0.9rem 2rem; border-radius: 4px;
-    font-weight: 600; font-size: 0.95rem;
-    text-decoration: none; letter-spacing: 0.5px;
-    border: 1.5px solid rgba(255,255,255,0.3);
-    transition: all 0.2s; cursor: pointer;
-  }
-  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+.hero-btns {
+display: flex; gap: 1rem; flex-wrap: wrap;
+animation: fadeUp 0.6s 0.3s ease both;
+}
+.btn-primary {
+background: var(–gold); color: var(–navy);
+padding: 0.9rem 2rem; border-radius: 4px;
+font-weight: 700; font-size: 0.95rem;
+text-decoration: none; letter-spacing: 0.5px;
+transition: all 0.2s; border: none; cursor: pointer;
+}
+.btn-primary:hover { background: var(–gold2); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(245,166,35,0.3); }
+.btn-outline {
+background: transparent; color: var(–white);
+padding: 0.9rem 2rem; border-radius: 4px;
+font-weight: 600; font-size: 0.95rem;
+text-decoration: none; letter-spacing: 0.5px;
+border: 1.5px solid rgba(255,255,255,0.3);
+transition: all 0.2s; cursor: pointer;
+}
+.btn-outline:hover { border-color: var(–gold); color: var(–gold); }
 
-  .hero-stats {
-    display: flex; gap: 2rem; margin-top: 2.5rem;
-    animation: fadeUp 0.6s 0.4s ease both;
-  }
-  .stat { text-align: left; }
-  .stat-num {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 2rem; font-weight: 800; color: var(--gold); line-height: 1;
-  }
-  .stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.5); font-weight: 500; margin-top: 2px; letter-spacing: 0.5px; }
+.hero-stats {
+display: flex; gap: 2rem; margin-top: 2.5rem;
+animation: fadeUp 0.6s 0.4s ease both;
+}
+.stat { text-align: left; }
+.stat-num {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-size: 2rem; font-weight: 800; color: var(–gold); line-height: 1;
+}
+.stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.5); font-weight: 500; margin-top: 2px; letter-spacing: 0.5px; }
 
-  /* Hero right — feature card */
-  .hero-card {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 16px; padding: 2rem;
-    backdrop-filter: blur(10px);
-    animation: fadeUp 0.6s 0.2s ease both;
-  }
-  .hero-card-title {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.1rem; color: var(--gold);
-    font-weight: 700; letter-spacing: 1px;
-    text-transform: uppercase; margin-bottom: 1.2rem;
-  }
-  .feature-item {
-    display: flex; align-items: flex-start; gap: 0.9rem;
-    padding: 0.85rem 0;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-  }
-  .feature-item:last-child { border-bottom: none; }
-  .feature-icon {
-    width: 36px; height: 36px; border-radius: 8px;
-    background: rgba(245,166,35,0.15);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1rem; flex-shrink: 0;
-  }
-  .feature-text strong {
-    display: block; color: var(--white);
-    font-size: 0.9rem; font-weight: 600; margin-bottom: 2px;
-  }
-  .feature-text span {
-    color: rgba(255,255,255,0.5); font-size: 0.8rem; line-height: 1.4;
-  }
+/* Hero right — feature card */
+.hero-card {
+background: rgba(255,255,255,0.05);
+border: 1px solid rgba(255,255,255,0.1);
+border-radius: 16px; padding: 2rem;
+backdrop-filter: blur(10px);
+animation: fadeUp 0.6s 0.2s ease both;
+}
+.hero-card-title {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-size: 1.1rem; color: var(–gold);
+font-weight: 700; letter-spacing: 1px;
+text-transform: uppercase; margin-bottom: 1.2rem;
+}
+.feature-item {
+display: flex; align-items: flex-start; gap: 0.9rem;
+padding: 0.85rem 0;
+border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.feature-item:last-child { border-bottom: none; }
+.feature-icon {
+width: 36px; height: 36px; border-radius: 8px;
+background: rgba(245,166,35,0.15);
+display: flex; align-items: center; justify-content: center;
+font-size: 1rem; flex-shrink: 0;
+}
+.feature-text strong {
+display: block; color: var(–white);
+font-size: 0.9rem; font-weight: 600; margin-bottom: 2px;
+}
+.feature-text span {
+color: rgba(255,255,255,0.5); font-size: 0.8rem; line-height: 1.4;
+}
 
-  /* ── SECTION BASE ──────────────────────────────────────── */
-  section { padding: 5rem 5%; }
-  .container { max-width: 1200px; margin: 0 auto; }
-  .section-tag {
-    font-size: 0.75rem; font-weight: 700; letter-spacing: 2.5px;
-    text-transform: uppercase; color: var(--gold);
-    margin-bottom: 0.75rem;
-  }
-  .section-title {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 800; font-size: clamp(2rem, 3.5vw, 2.8rem);
-    color: var(--navy); line-height: 1.1; margin-bottom: 1rem;
-  }
-  .section-sub {
-    color: var(--gray); font-size: 1rem; line-height: 1.7;
-    max-width: 560px;
-  }
+/* ── SECTION BASE ──────────────────────────────────────── */
+section { padding: 5rem 5%; }
+.container { max-width: 1200px; margin: 0 auto; }
+.section-tag {
+font-size: 0.75rem; font-weight: 700; letter-spacing: 2.5px;
+text-transform: uppercase; color: var(–gold);
+margin-bottom: 0.75rem;
+}
+.section-title {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 800; font-size: clamp(2rem, 3.5vw, 2.8rem);
+color: var(–navy); line-height: 1.1; margin-bottom: 1rem;
+}
+.section-sub {
+color: var(–gray); font-size: 1rem; line-height: 1.7;
+max-width: 560px;
+}
 
-  /* ── SERVICES ──────────────────────────────────────────── */
-  #services { background: var(--off); }
-  .services-header {
-    display: flex; justify-content: space-between;
-    align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;
-  }
-  .services-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-  }
-  .service-card {
-    background: var(--white); border-radius: 12px;
-    padding: 1.8rem; border: 1px solid var(--lgray);
-    transition: all 0.3s; position: relative; overflow: hidden;
-  }
-  .service-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0;
-    height: 3px; background: var(--gold);
-    transform: scaleX(0); transform-origin: left;
-    transition: transform 0.3s;
-  }
-  .service-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(27,42,74,0.1); border-color: transparent; }
-  .service-card:hover::before { transform: scaleX(1); }
-  .service-emoji { font-size: 2rem; margin-bottom: 1rem; display: block; }
-  .service-card h3 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 700; font-size: 1.2rem; color: var(--navy);
-    margin-bottom: 0.5rem; letter-spacing: 0.3px;
-  }
-  .service-card p { color: var(--gray); font-size: 0.9rem; line-height: 1.6; }
+/* ── SERVICES ──────────────────────────────────────────── */
+#services { background: var(–off); }
+.services-header {
+display: flex; justify-content: space-between;
+align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;
+}
+.services-grid {
+display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 1.5rem;
+}
+.service-card {
+background: var(–white); border-radius: 12px;
+padding: 1.8rem; border: 1px solid var(–lgray);
+transition: all 0.3s; position: relative; overflow: hidden;
+}
+.service-card::before {
+content: ‘’; position: absolute; top: 0; left: 0; right: 0;
+height: 3px; background: var(–gold);
+transform: scaleX(0); transform-origin: left;
+transition: transform 0.3s;
+}
+.service-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(27,42,74,0.1); border-color: transparent; }
+.service-card:hover::before { transform: scaleX(1); }
+.service-emoji { font-size: 2rem; margin-bottom: 1rem; display: block; }
+.service-card h3 {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 700; font-size: 1.2rem; color: var(–navy);
+margin-bottom: 0.5rem; letter-spacing: 0.3px;
+}
+.service-card p { color: var(–gray); font-size: 0.9rem; line-height: 1.6; }
 
-  /* ── PRICING ───────────────────────────────────────────── */
-  #pricing { background: var(--navy); }
-  #pricing .section-title { color: var(--white); }
-  #pricing .section-tag { color: var(--gold); }
-  #pricing .section-sub { color: rgba(255,255,255,0.6); }
+/* ── PRICING ───────────────────────────────────────────── */
+#pricing { background: var(–navy); }
+#pricing .section-title { color: var(–white); }
+#pricing .section-tag { color: var(–gold); }
+#pricing .section-sub { color: rgba(255,255,255,0.6); }
 
-  .pricing-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem; margin: 3rem 0 2rem;
-  }
-  .price-card {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 12px; padding: 1.8rem;
-    text-align: center; transition: all 0.3s;
-    position: relative; overflow: hidden;
-  }
-  .price-card.featured {
-    background: var(--gold);
-    border-color: var(--gold);
-  }
-  .price-card:hover { transform: translateY(-4px); border-color: var(--gold); }
-  .price-card-label {
-    font-size: 0.8rem; font-weight: 700; letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.6); margin-bottom: 0.5rem;
-  }
-  .price-card.featured .price-card-label { color: rgba(27,42,74,0.7); }
-  .price-card-title {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.1rem; font-weight: 700;
-    color: var(--white); margin-bottom: 1rem; line-height: 1.2;
-  }
-  .price-card.featured .price-card-title { color: var(--navy); }
-  .price-amount {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 3rem; font-weight: 800;
-    color: var(--gold); line-height: 1;
-  }
-  .price-card.featured .price-amount { color: var(--navy); }
-  .price-unit { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 0.3rem; }
-  .price-card.featured .price-unit { color: rgba(27,42,74,0.6); }
-  .price-desc {
-    font-size: 0.8rem; color: rgba(255,255,255,0.5);
-    margin-top: 1rem; line-height: 1.5;
-  }
-  .price-card.featured .price-desc { color: rgba(27,42,74,0.7); }
+.pricing-grid {
+display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 1.5rem; margin: 3rem 0 2rem;
+}
+.price-card {
+background: rgba(255,255,255,0.05);
+border: 1px solid rgba(255,255,255,0.1);
+border-radius: 12px; padding: 1.8rem;
+text-align: center; transition: all 0.3s;
+position: relative; overflow: hidden;
+}
+.price-card.featured {
+background: var(–gold);
+border-color: var(–gold);
+}
+.price-card:hover { transform: translateY(-4px); border-color: var(–gold); }
+.price-card-label {
+font-size: 0.8rem; font-weight: 700; letter-spacing: 1.5px;
+text-transform: uppercase;
+color: rgba(255,255,255,0.6); margin-bottom: 0.5rem;
+}
+.price-card.featured .price-card-label { color: rgba(27,42,74,0.7); }
+.price-card-title {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-size: 1.1rem; font-weight: 700;
+color: var(–white); margin-bottom: 1rem; line-height: 1.2;
+}
+.price-card.featured .price-card-title { color: var(–navy); }
+.price-amount {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-size: 3rem; font-weight: 800;
+color: var(–gold); line-height: 1;
+}
+.price-card.featured .price-amount { color: var(–navy); }
+.price-unit { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 0.3rem; }
+.price-card.featured .price-unit { color: rgba(27,42,74,0.6); }
+.price-desc {
+font-size: 0.8rem; color: rgba(255,255,255,0.5);
+margin-top: 1rem; line-height: 1.5;
+}
+.price-card.featured .price-desc { color: rgba(27,42,74,0.7); }
 
-  /* Fleet discount table */
-  .fleet-table-wrap {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 12px; overflow: hidden; margin-top: 2rem;
-  }
-  .fleet-table-title {
-    padding: 1rem 1.5rem;
-    background: rgba(245,166,35,0.15);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 700; font-size: 1rem;
-    color: var(--gold); letter-spacing: 1px; text-transform: uppercase;
-  }
-  table { width: 100%; border-collapse: collapse; }
-  thead tr { background: rgba(255,255,255,0.06); }
-  th {
-    padding: 0.8rem 1rem; font-size: 0.8rem;
-    font-weight: 700; color: rgba(255,255,255,0.5);
-    letter-spacing: 1px; text-transform: uppercase;
-    text-align: center; border-bottom: 1px solid rgba(255,255,255,0.08);
-  }
-  th:first-child { text-align: left; }
-  td {
-    padding: 0.9rem 1rem; font-size: 0.9rem;
-    color: rgba(255,255,255,0.8); text-align: center;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-  }
-  td:first-child { text-align: left; font-weight: 600; color: var(--white); }
-  tr:last-child td { border-bottom: none; }
-  tbody tr:hover { background: rgba(255,255,255,0.03); }
-  .save-badge {
-    background: rgba(245,166,35,0.2);
-    color: var(--gold); padding: 2px 8px;
-    border-radius: 100px; font-size: 0.75rem; font-weight: 700;
-  }
+/* Fleet discount table */
+.fleet-table-wrap {
+background: rgba(255,255,255,0.04);
+border: 1px solid rgba(255,255,255,0.1);
+border-radius: 12px; overflow: hidden; margin-top: 2rem;
+}
+.fleet-table-title {
+padding: 1rem 1.5rem;
+background: rgba(245,166,35,0.15);
+border-bottom: 1px solid rgba(255,255,255,0.1);
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 700; font-size: 1rem;
+color: var(–gold); letter-spacing: 1px; text-transform: uppercase;
+}
+table { width: 100%; border-collapse: collapse; }
+thead tr { background: rgba(255,255,255,0.06); }
+th {
+padding: 0.8rem 1rem; font-size: 0.8rem;
+font-weight: 700; color: rgba(255,255,255,0.5);
+letter-spacing: 1px; text-transform: uppercase;
+text-align: center; border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+th:first-child { text-align: left; }
+td {
+padding: 0.9rem 1rem; font-size: 0.9rem;
+color: rgba(255,255,255,0.8); text-align: center;
+border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+td:first-child { text-align: left; font-weight: 600; color: var(–white); }
+tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: rgba(255,255,255,0.03); }
+.save-badge {
+background: rgba(245,166,35,0.2);
+color: var(–gold); padding: 2px 8px;
+border-radius: 100px; font-size: 0.75rem; font-weight: 700;
+}
 
-  /* ── WHY US ─────────────────────────────────────────────── */
-  #why { background: var(--white); }
-  .why-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem; margin-top: 3rem;
-  }
-  .why-card {
-    display: flex; gap: 1.2rem; align-items: flex-start;
-    padding: 1.5rem; border-radius: 12px;
-    border: 1px solid var(--lgray); transition: all 0.25s;
-  }
-  .why-card:hover { border-color: var(--gold); box-shadow: 0 8px 24px rgba(245,166,35,0.1); }
-  .why-num {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 2.5rem; font-weight: 800;
-    color: var(--gold); line-height: 1; min-width: 48px;
-    opacity: 0.5;
-  }
-  .why-text h4 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.1rem; font-weight: 700;
-    color: var(--navy); margin-bottom: 0.4rem;
-  }
-  .why-text p { color: var(--gray); font-size: 0.88rem; line-height: 1.6; }
+/* ── WHY US ─────────────────────────────────────────────── */
+#why { background: var(–white); }
+.why-grid {
+display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 1.5rem; margin-top: 3rem;
+}
+.why-card {
+display: flex; gap: 1.2rem; align-items: flex-start;
+padding: 1.5rem; border-radius: 12px;
+border: 1px solid var(–lgray); transition: all 0.25s;
+}
+.why-card:hover { border-color: var(–gold); box-shadow: 0 8px 24px rgba(245,166,35,0.1); }
+.why-num {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-size: 2.5rem; font-weight: 800;
+color: var(–gold); line-height: 1; min-width: 48px;
+opacity: 0.5;
+}
+.why-text h4 {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-size: 1.1rem; font-weight: 700;
+color: var(–navy); margin-bottom: 0.4rem;
+}
+.why-text p { color: var(–gray); font-size: 0.88rem; line-height: 1.6; }
 
-  /* ── BOOKING FORM ───────────────────────────────────────── */
-  #booking { background: var(--off); }
-  .booking-wrap {
-    display: grid; grid-template-columns: 1fr 1.6fr;
-    gap: 4rem; align-items: start;
-  }
-  .booking-info h3 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.5rem; font-weight: 700; color: var(--navy);
-    margin-bottom: 1.5rem;
-  }
-  .contact-item {
-    display: flex; align-items: center; gap: 0.8rem;
-    margin-bottom: 1rem;
-  }
-  .contact-icon {
-    width: 40px; height: 40px; border-radius: 8px;
-    background: var(--navy); display: flex;
-    align-items: center; justify-content: center;
-    font-size: 1rem; flex-shrink: 0;
-  }
-  .contact-item span { color: var(--gray); font-size: 0.9rem; }
-  .contact-item strong { display: block; color: var(--navy); font-size: 0.95rem; }
+/* ── BOOKING FORM ───────────────────────────────────────── */
+#booking { background: var(–off); }
+.booking-wrap {
+display: grid; grid-template-columns: 1fr 1.6fr;
+gap: 4rem; align-items: start;
+}
+.booking-info h3 {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-size: 1.5rem; font-weight: 700; color: var(–navy);
+margin-bottom: 1.5rem;
+}
+.contact-item {
+display: flex; align-items: center; gap: 0.8rem;
+margin-bottom: 1rem;
+}
+.contact-icon {
+width: 40px; height: 40px; border-radius: 8px;
+background: var(–navy); display: flex;
+align-items: center; justify-content: center;
+font-size: 1rem; flex-shrink: 0;
+}
+.contact-item span { color: var(–gray); font-size: 0.9rem; }
+.contact-item strong { display: block; color: var(–navy); font-size: 0.95rem; }
 
-  .avail-badge {
-    margin-top: 2rem; padding: 1rem 1.2rem;
-    background: var(--navy); border-radius: 10px;
-    display: flex; align-items: center; gap: 0.8rem;
-  }
-  .avail-dot {
-    width: 10px; height: 10px; border-radius: 50%;
-    background: #22c55e; flex-shrink: 0;
-    box-shadow: 0 0 0 3px rgba(34,197,94,0.2);
-    animation: pulse 2s infinite;
-  }
-  .avail-text strong { display: block; color: var(--white); font-size: 0.9rem; }
-  .avail-text span { color: rgba(255,255,255,0.5); font-size: 0.8rem; }
+.avail-badge {
+margin-top: 2rem; padding: 1rem 1.2rem;
+background: var(–navy); border-radius: 10px;
+display: flex; align-items: center; gap: 0.8rem;
+}
+.avail-dot {
+width: 10px; height: 10px; border-radius: 50%;
+background: #22c55e; flex-shrink: 0;
+box-shadow: 0 0 0 3px rgba(34,197,94,0.2);
+animation: pulse 2s infinite;
+}
+.avail-text strong { display: block; color: var(–white); font-size: 0.9rem; }
+.avail-text span { color: rgba(255,255,255,0.5); font-size: 0.8rem; }
 
-  /* Form */
-  .booking-form {
-    background: var(--white); border-radius: 16px;
-    padding: 2.5rem; border: 1px solid var(--lgray);
-    box-shadow: 0 4px 24px rgba(27,42,74,0.06);
-  }
-  .form-title {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.5rem; font-weight: 700; color: var(--navy);
-    margin-bottom: 0.4rem;
-  }
-  .form-sub { color: var(--gray); font-size: 0.88rem; margin-bottom: 1.8rem; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .form-group { margin-bottom: 1.2rem; }
-  .form-group label {
-    display: block; font-size: 0.8rem; font-weight: 600;
-    color: var(--navy); margin-bottom: 0.4rem;
-    letter-spacing: 0.3px; text-transform: uppercase;
-  }
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    width: 100%; padding: 0.75rem 1rem;
-    border: 1.5px solid var(--lgray); border-radius: 8px;
-    font-family: 'Barlow', sans-serif; font-size: 0.9rem;
-    color: var(--text); background: var(--white);
-    transition: border-color 0.2s; outline: none;
-  }
-  .form-group input:focus,
-  .form-group select:focus,
-  .form-group textarea:focus { border-color: var(--gold); }
-  .form-group textarea { resize: vertical; min-height: 100px; }
-  .form-submit {
-    width: 100%; padding: 1rem;
-    background: var(--navy); color: var(--white);
-    border: none; border-radius: 8px;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.1rem; font-weight: 700; letter-spacing: 1px;
-    cursor: pointer; transition: all 0.2s;
-    text-transform: uppercase;
-  }
-  .form-submit:hover { background: var(--gold); color: var(--navy); transform: translateY(-2px); }
-  .form-note {
-    text-align: center; margin-top: 0.75rem;
-    font-size: 0.78rem; color: var(--gray);
-  }
-  .success-msg {
-    display: none; text-align: center; padding: 1.5rem;
-    background: rgba(34,197,94,0.1); border-radius: 8px;
-    color: #166534; font-weight: 600; margin-top: 1rem;
-  }
+/* Form */
+.booking-form {
+background: var(–white); border-radius: 16px;
+padding: 2.5rem; border: 1px solid var(–lgray);
+box-shadow: 0 4px 24px rgba(27,42,74,0.06);
+}
+.form-title {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-size: 1.5rem; font-weight: 700; color: var(–navy);
+margin-bottom: 0.4rem;
+}
+.form-sub { color: var(–gray); font-size: 0.88rem; margin-bottom: 1.8rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-group { margin-bottom: 1.2rem; }
+.form-group label {
+display: block; font-size: 0.8rem; font-weight: 600;
+color: var(–navy); margin-bottom: 0.4rem;
+letter-spacing: 0.3px; text-transform: uppercase;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+width: 100%; padding: 0.75rem 1rem;
+border: 1.5px solid var(–lgray); border-radius: 8px;
+font-family: ‘Barlow’, sans-serif; font-size: 0.9rem;
+color: var(–text); background: var(–white);
+transition: border-color 0.2s; outline: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: var(–gold); }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-submit {
+width: 100%; padding: 1rem;
+background: var(–navy); color: var(–white);
+border: none; border-radius: 8px;
+font-family: ‘Barlow Condensed’, sans-serif;
+font-size: 1.1rem; font-weight: 700; letter-spacing: 1px;
+cursor: pointer; transition: all 0.2s;
+text-transform: uppercase;
+}
+.form-submit:hover { background: var(–gold); color: var(–navy); transform: translateY(-2px); }
+.form-note {
+text-align: center; margin-top: 0.75rem;
+font-size: 0.78rem; color: var(–gray);
+}
+.success-msg {
+display: none; text-align: center; padding: 1.5rem;
+background: rgba(34,197,94,0.1); border-radius: 8px;
+color: #166534; font-weight: 600; margin-top: 1rem;
+}
 
-  /* ── FOOTER ─────────────────────────────────────────────── */
-  footer {
-    background: var(--navy2); color: rgba(255,255,255,0.6);
-    padding: 3rem 5%;
-  }
-  .footer-inner {
-    max-width: 1200px; margin: 0 auto;
-    display: flex; justify-content: space-between;
-    align-items: center; flex-wrap: wrap; gap: 1.5rem;
-  }
-  .footer-logo {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 800; font-size: 1.3rem; color: var(--white);
-  }
-  .footer-logo span { color: var(--gold); }
-  .footer-links { display: flex; gap: 1.5rem; }
-  .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
-  .footer-links a:hover { color: var(--gold); }
-  .footer-copy { font-size: 0.8rem; }
+/* ── FOOTER ─────────────────────────────────────────────── */
+footer {
+background: var(–navy2); color: rgba(255,255,255,0.6);
+padding: 3rem 5%;
+}
+.footer-inner {
+max-width: 1200px; margin: 0 auto;
+display: flex; justify-content: space-between;
+align-items: center; flex-wrap: wrap; gap: 1.5rem;
+}
+.footer-logo {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 800; font-size: 1.3rem; color: var(–white);
+}
+.footer-logo span { color: var(–gold); }
+.footer-links { display: flex; gap: 1.5rem; }
+.footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+.footer-links a:hover { color: var(–gold); }
+.footer-copy { font-size: 0.8rem; }
 
-  /* ── ANIMATIONS ─────────────────────────────────────────── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes pulse {
-    0%, 100% { box-shadow: 0 0 0 3px rgba(34,197,94,0.2); }
-    50%       { box-shadow: 0 0 0 6px rgba(34,197,94,0.1); }
-  }
+/* ── ANIMATIONS ─────────────────────────────────────────── */
+@keyframes fadeUp {
+from { opacity: 0; transform: translateY(20px); }
+to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+0%, 100% { box-shadow: 0 0 0 3px rgba(34,197,94,0.2); }
+50%       { box-shadow: 0 0 0 6px rgba(34,197,94,0.1); }
+}
 
-  /* ── RESPONSIVE ─────────────────────────────────────────── */
-  @media (max-width: 900px) {
-    .hero-content { grid-template-columns: 1fr; }
-    .hero-card { display: none; }
-    .booking-wrap { grid-template-columns: 1fr; }
-    .form-row { grid-template-columns: 1fr; }
-    .nav-links { display: none; }
-  }
+/* ── RESPONSIVE ─────────────────────────────────────────── */
+@media (max-width: 900px) {
+.hero-content { grid-template-columns: 1fr; }
+.hero-card { display: none; }
+.booking-wrap { grid-template-columns: 1fr; }
+.form-row { grid-template-columns: 1fr; }
+.nav-links { display: none; }
+}
 </style>
+
 </head>
 <body>
 
 <!-- NAV -->
+
 <nav>
   <div class="nav-logo">Clear<span>Route</span></div>
   <ul class="nav-links">
@@ -490,6 +493,7 @@
 </nav>
 
 <!-- HERO -->
+
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-stripe"></div>
@@ -563,6 +567,7 @@
 </section>
 
 <!-- SERVICES -->
+
 <section id="services">
   <div class="container">
     <div class="services-header">
@@ -618,6 +623,7 @@
 </section>
 
 <!-- PRICING -->
+
 <section id="pricing">
   <div class="container">
     <p class="section-tag">Transparent Pricing</p>
@@ -654,91 +660,95 @@
       </div>
     </div>
 
-    <!-- Mixed Fleet Card -->
-    <div style="margin:1.5rem 0; background:rgba(245,166,35,0.08); border:2px solid var(--gold); border-radius:12px; padding:1.5rem 2rem;">
-      <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
-        <div style="font-size:2rem;">🚌🚐</div>
-        <div style="flex:1;">
-          <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:1.3rem; color:var(--navy); margin-bottom:0.3rem;">Have a Mix of Small & Large Buses?</div>
-          <div style="color:var(--gray); font-size:0.95rem; line-height:1.6;">No problem — we price each bus by its size. Small buses at their rate, large buses at theirs. Your total is calculated per bus type so you always get a fair price no matter what your fleet looks like.</div>
-        </div>
-        <div style="text-align:center; min-width:160px;">
-          <div style="font-family:'Barlow Condensed',sans-serif; font-size:1.8rem; font-weight:800; color:var(--navy);">~$90<span style="font-size:1rem; font-weight:500;">/bus</span></div>
-          <div style="font-size:0.78rem; color:var(--gray); margin-top:2px;">Mixed fleet average<br>(interior only)</div>
-        </div>
-      </div>
-      <div style="margin-top:1.2rem; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:0.75rem;">
-        <div style="background:white; border-radius:8px; padding:0.9rem 1.2rem; border:1px solid var(--lgray);">
-          <div style="font-size:0.75rem; font-weight:700; color:var(--gray); letter-spacing:1px; text-transform:uppercase; margin-bottom:0.4rem;">Example: 5 Small + 5 Large</div>
-          <div style="font-size:0.9rem; color:var(--navy);">5 × $80 + 5 × $100 = <strong>$900 total</strong></div>
-        </div>
-        <div style="background:white; border-radius:8px; padding:0.9rem 1.2rem; border:1px solid var(--lgray);">
-          <div style="font-size:0.75rem; font-weight:700; color:var(--gray); letter-spacing:1px; text-transform:uppercase; margin-bottom:0.4rem;">Example: 10 Small + 10 Large</div>
-          <div style="font-size:0.9rem; color:var(--navy);">10 × $70 + 10 × $90 = <strong>$1,600 total</strong> <span style="color:#16a34a; font-size:0.8rem;">(-$200 fleet discount)</span></div>
-        </div>
-        <div style="background:white; border-radius:8px; padding:0.9rem 1.2rem; border:1px solid var(--lgray);">
-          <div style="font-size:0.75rem; font-weight:700; color:var(--gray); letter-spacing:1px; text-transform:uppercase; margin-bottom:0.4rem;">Example: 15 Small + 10 Large</div>
-          <div style="font-size:0.9rem; color:var(--navy);">15 × $60 + 10 × $80 = <strong>$1,700 total</strong> <span style="color:#16a34a; font-size:0.8rem;">(-$500 fleet discount)</span></div>
-        </div>
-      </div>
+```
+<!-- Mixed Fleet Card -->
+<div style="margin:1.5rem 0; background:rgba(245,166,35,0.08); border:2px solid var(--gold); border-radius:12px; padding:1.5rem 2rem;">
+  <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+    <div style="font-size:2rem;">🚌🚐</div>
+    <div style="flex:1;">
+      <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:1.3rem; color:var(--navy); margin-bottom:0.3rem;">Have a Mix of Small & Large Buses?</div>
+      <div style="color:var(--gray); font-size:0.95rem; line-height:1.6;">No problem — we price each bus by its size. Small buses at their rate, large buses at theirs. Your total is calculated per bus type so you always get a fair price no matter what your fleet looks like.</div>
     </div>
+    <div style="text-align:center; min-width:160px;">
+      <div style="font-family:'Barlow Condensed',sans-serif; font-size:1.8rem; font-weight:800; color:var(--navy);">~$90<span style="font-size:1rem; font-weight:500;">/bus</span></div>
+      <div style="font-size:0.78rem; color:var(--gray); margin-top:2px;">Mixed fleet average<br>(interior only)</div>
+    </div>
+  </div>
+  <div style="margin-top:1.2rem; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:0.75rem;">
+    <div style="background:white; border-radius:8px; padding:0.9rem 1.2rem; border:1px solid var(--lgray);">
+      <div style="font-size:0.75rem; font-weight:700; color:var(--gray); letter-spacing:1px; text-transform:uppercase; margin-bottom:0.4rem;">Example: 5 Small + 5 Large</div>
+      <div style="font-size:0.9rem; color:var(--navy);">5 × $80 + 5 × $100 = <strong>$900 total</strong></div>
+    </div>
+    <div style="background:white; border-radius:8px; padding:0.9rem 1.2rem; border:1px solid var(--lgray);">
+      <div style="font-size:0.75rem; font-weight:700; color:var(--gray); letter-spacing:1px; text-transform:uppercase; margin-bottom:0.4rem;">Example: 10 Small + 10 Large</div>
+      <div style="font-size:0.9rem; color:var(--navy);">10 × $70 + 10 × $90 = <strong>$1,600 total</strong> <span style="color:#16a34a; font-size:0.8rem;">(-$200 fleet discount)</span></div>
+    </div>
+    <div style="background:white; border-radius:8px; padding:0.9rem 1.2rem; border:1px solid var(--lgray);">
+      <div style="font-size:0.75rem; font-weight:700; color:var(--gray); letter-spacing:1px; text-transform:uppercase; margin-bottom:0.4rem;">Example: 15 Small + 10 Large</div>
+      <div style="font-size:0.9rem; color:var(--navy);">15 × $60 + 10 × $80 = <strong>$1,700 total</strong> <span style="color:#16a34a; font-size:0.8rem;">(-$500 fleet discount)</span></div>
+    </div>
+  </div>
+</div>
 
-    <div class="fleet-table-wrap">
-      <div class="fleet-table-title">🚌 Fleet Discount Pricing</div>
-      <table>
-        <thead>
-          <tr>
-            <th>Fleet Size</th>
-            <th>Sm. Interior</th>
-            <th>Sm. Full Detail</th>
-            <th>Lg. Interior</th>
-            <th>Lg. Full Detail</th>
-            <th>Mixed Avg</th>
-            <th>You Save</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1–9 Buses (Standard)</td>
-            <td>$80/bus</td>
-            <td>$180/bus</td>
-            <td>$100/bus</td>
-            <td>$200/bus</td>
-            <td>~$90/bus</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>10+ Buses</td>
-            <td>$70/bus</td>
-            <td>$170/bus</td>
-            <td>$90/bus</td>
-            <td>$190/bus</td>
-            <td>~$80/bus</td>
-            <td><span class="save-badge">Save $100+</span></td>
-          </tr>
-          <tr>
-            <td>20+ Buses</td>
-            <td>$60/bus</td>
-            <td>$160/bus</td>
-            <td>$80/bus</td>
-            <td>$180/bus</td>
-            <td>~$70/bus</td>
-            <td><span class="save-badge">Save $400+</span></td>
-          </tr>
-          <tr style="background:rgba(245,166,35,0.07);">
-            <td style="color:var(--navy); font-weight:700;">Mixed Fleet<br><span style="font-size:0.78rem; font-weight:400; color:var(--gray);">Small + Large combined</span></td>
-            <td colspan="2" style="color:var(--navy);">Sm. rate + Lg. rate<br><span style="font-size:0.78rem; color:var(--gray);">per bus type</span></td>
-            <td colspan="2" style="color:var(--navy);">Sm. rate + Lg. rate<br><span style="font-size:0.78rem; color:var(--gray);">per bus type</span></td>
-            <td>~$90/bus</td>
-            <td><span class="save-badge">Flexible</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+<div class="fleet-table-wrap">
+  <div class="fleet-table-title">🚌 Fleet Discount Pricing</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Fleet Size</th>
+        <th>Sm. Interior</th>
+        <th>Sm. Full Detail</th>
+        <th>Lg. Interior</th>
+        <th>Lg. Full Detail</th>
+        <th>Mixed Avg</th>
+        <th>You Save</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1–9 Buses (Standard)</td>
+        <td>$80/bus</td>
+        <td>$180/bus</td>
+        <td>$100/bus</td>
+        <td>$200/bus</td>
+        <td>~$90/bus</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>10+ Buses</td>
+        <td>$70/bus</td>
+        <td>$170/bus</td>
+        <td>$90/bus</td>
+        <td>$190/bus</td>
+        <td>~$80/bus</td>
+        <td><span class="save-badge">Save $100+</span></td>
+      </tr>
+      <tr>
+        <td>20+ Buses</td>
+        <td>$60/bus</td>
+        <td>$160/bus</td>
+        <td>$80/bus</td>
+        <td>$180/bus</td>
+        <td>~$70/bus</td>
+        <td><span class="save-badge">Save $400+</span></td>
+      </tr>
+      <tr style="background:rgba(245,166,35,0.07);">
+        <td style="color:var(--navy); font-weight:700;">Mixed Fleet<br><span style="font-size:0.78rem; font-weight:400; color:var(--gray);">Small + Large combined</span></td>
+        <td colspan="2" style="color:var(--navy);">Sm. rate + Lg. rate<br><span style="font-size:0.78rem; color:var(--gray);">per bus type</span></td>
+        <td colspan="2" style="color:var(--navy);">Sm. rate + Lg. rate<br><span style="font-size:0.78rem; color:var(--gray);">per bus type</span></td>
+        <td>~$90/bus</td>
+        <td><span class="save-badge">Flexible</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+```
+
   </div>
 </section>
 
 <!-- WHY US -->
+
 <section id="why">
   <div class="container">
     <p class="section-tag">Why ClearRoute</p>
@@ -791,6 +801,7 @@
 </section>
 
 <!-- BOOKING -->
+
 <section id="booking">
   <div class="container">
     <div class="booking-wrap">
@@ -799,120 +810,123 @@
         <h2 class="section-title">Request a<br>Free Quote</h2>
         <p class="section-sub" style="margin-bottom:2rem">Fill out the form and we'll get back to you within 24 hours with a custom quote for your fleet.</p>
 
-        <div class="contact-item">
-          <div class="contact-icon">📞</div>
-          <div>
-            <strong>(347) 784-4048</strong>
-            <span>Call or text anytime</span>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">✉️</div>
-          <div>
-            <strong>clearroutecleaningservices@gmail.com</strong>
-            <span>Email us anytime</span>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">📍</div>
-          <div>
-            <strong>New York City</strong>
-            <span>Serving all 5 boroughs</span>
-          </div>
-        </div>
-
-        <div class="avail-badge">
-          <div class="avail-dot"></div>
-          <div class="avail-text">
-            <strong>Available 24 Hours a Day, 7 Days a Week</strong>
-            <span>Early mornings, late nights, weekends — we work around you</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="booking-form">
-        <div class="form-title">Request a Quote</div>
-        <div class="form-sub">Tell us about your fleet and we'll get you a price right away.</div>
-
-        <form id="quoteForm" name="quote-request" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="handleSubmit(event)">
-          <input type="hidden" name="form-name" value="quote-request"/>
-          <p style="display:none;"><input name="bot-field"/></p>
-          <div class="form-row">
-            <div class="form-group">
-              <label>First Name</label>
-              <input type="text" name="first-name" placeholder="John" required/>
-            </div>
-            <div class="form-group">
-              <label>Last Name</label>
-              <input type="text" name="last-name" placeholder="Smith" required/>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Company Name</label>
-            <input type="text" name="company" placeholder="Your bus company name" required/>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label>Phone Number</label>
-              <input type="tel" name="phone" placeholder="(718) 000-0000" required/>
-            </div>
-            <div class="form-group">
-              <label>Email Address</label>
-              <input type="email" name="email" placeholder="you@company.com"/>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label>Borough / Location</label>
-              <select name="borough" required>
-                <option value="">Select borough</option>
-                <option>Brooklyn</option>
-                <option>Queens</option>
-                <option>Bronx</option>
-                <option>Staten Island</option>
-                <option>Manhattan</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Number of Buses</label>
-              <select name="num-buses" required>
-                <option value="">How many buses?</option>
-                <option>1–5 buses</option>
-                <option>6–10 buses</option>
-                <option>11–20 buses</option>
-                <option>21–50 buses</option>
-                <option>50+ buses</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Service Needed</label>
-            <select name="service" required>
-              <option value="">Select service</option>
-              <option>Interior Only (Small Bus — $80/bus)</option>
-              <option>Interior Only (Large Bus — $100/bus)</option>
-              <option>Full Detail (Small Bus — $180/bus)</option>
-              <option>Full Detail (Large Bus — $200/bus)</option>
-              <option>Mixed Fleet — Interior + Exterior</option>
-              <option>Not sure — need a custom quote</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Preferred Schedule</label>
-            <textarea name="schedule" placeholder="Tell us when works best — early morning, late night, weekend, etc. We are available 24/7."></textarea>
-          </div>
-          <button type="submit" class="form-submit">Send Quote Request →</button>
-          <p class="form-note">We'll respond within 24 hours · No commitment required</p>
-        </form>
-        <div class="success-msg" id="successMsg">
-          ✅ Thank you! We received your request and will reach out within 24 hours.
-        </div>
+```
+    <div class="contact-item">
+      <div class="contact-icon">📞</div>
+      <div>
+        <strong>(347) 784-4048</strong>
+        <span>Call or text anytime</span>
       </div>
     </div>
+    <div class="contact-item">
+      <div class="contact-icon">✉️</div>
+      <div>
+        <strong>clearroutecleaningservices@gmail.com</strong>
+        <span>Email us anytime</span>
+      </div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon">📍</div>
+      <div>
+        <strong>New York City</strong>
+        <span>Serving all 5 boroughs</span>
+      </div>
+    </div>
+
+    <div class="avail-badge">
+      <div class="avail-dot"></div>
+      <div class="avail-text">
+        <strong>Available 24 Hours a Day, 7 Days a Week</strong>
+        <span>Early mornings, late nights, weekends — we work around you</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="booking-form">
+    <div class="form-title">Request a Quote</div>
+    <div class="form-sub">Tell us about your fleet and we'll get you a price right away.</div>
+
+    <form id="quoteForm" action="https://formspree.io/f/mvzdvkeb" method="POST" onsubmit="handleSubmit(event)">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" name="first-name" placeholder="John" required/>
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" name="last-name" placeholder="Smith" required/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Company Name</label>
+        <input type="text" name="company" placeholder="Your bus company name" required/>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" name="phone" placeholder="(718) 000-0000" required/>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" name="email" placeholder="you@company.com"/>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Borough / Location</label>
+          <select name="borough" required>
+            <option value="">Select borough</option>
+            <option>Brooklyn</option>
+            <option>Queens</option>
+            <option>Bronx</option>
+            <option>Staten Island</option>
+            <option>Manhattan</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Number of Buses</label>
+          <select name="num-buses" required>
+            <option value="">How many buses?</option>
+            <option>1–5 buses</option>
+            <option>6–10 buses</option>
+            <option>11–20 buses</option>
+            <option>21–50 buses</option>
+            <option>50+ buses</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Service Needed</label>
+        <select name="service" required>
+          <option value="">Select service</option>
+          <option>Interior Only (Small Bus — $80/bus)</option>
+          <option>Interior Only (Large Bus — $100/bus)</option>
+          <option>Full Detail (Small Bus — $180/bus)</option>
+          <option>Full Detail (Large Bus — $200/bus)</option>
+          <option>Mixed Fleet — Interior + Exterior</option>
+          <option>Not sure — need a custom quote</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Preferred Schedule</label>
+        <textarea name="schedule" placeholder="Tell us when works best — early morning, late night, weekend, etc. We are available 24/7."></textarea>
+      </div>
+      <button type="submit" class="form-submit">Send Quote Request →</button>
+      <p class="form-note">We'll respond within 24 hours · No commitment required</p>
+    </form>
+    <div class="success-msg" id="successMsg">
+      ✅ Thank you! We received your request and will reach out within 24 hours.
+    </div>
+  </div>
+</div>
+```
+
   </div>
 </section>
 
 <!-- FOOTER -->
+
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">Clear<span>Route</span> Cleaning Services</div>
@@ -932,16 +946,20 @@
     const form = document.getElementById('quoteForm');
     const formData = new FormData(form);
 
-    fetch("/", {
+    fetch("https://formspree.io/f/mvzdvkeb", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      body: formData,
+      headers: { "Accept": "application/json" }
     })
-    .then(() => {
-      form.style.display = 'none';
-      document.getElementById('successMsg').style.display = 'block';
+    .then(response => {
+      if (response.ok) {
+        form.style.display = "none";
+        document.getElementById("successMsg").style.display = "block";
+      } else {
+        alert("Something went wrong. Please call us directly at (347) 784-4048");
+      }
     })
-    .catch((error) => {
+    .catch(error => {
       alert("Something went wrong. Please call us directly at (347) 784-4048");
     });
   }
@@ -972,5 +990,6 @@
     observer.observe(el);
   });
 </script>
+
 </body>
 </html>
